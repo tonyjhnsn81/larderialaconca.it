@@ -13,34 +13,18 @@
         .hero-gradient { background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%); }
         .glass-effect { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
         .floating { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+        @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .card-hover:hover { transform: translateY(-4px); transition: all 0.3s ease-in-out; }
-        .prose h2 { font-weight: 900; font-size: 1.875rem; margin-top: 2.5rem; margin-bottom: 1.25rem; color: #1e1b4b; border-left: 4px solid #10b981; padding-left: 1rem; }
-        .prose h3 { font-weight: 800; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #312e81; }
-        .prose p { margin-bottom: 1.25rem; line-height: 1.75; color: #374151; }
-        .prose ul { margin-bottom: 1.25rem; list-style-type: none; }
-        .prose li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
-        .prose li::before { content: "→"; position: absolute; left: 0; color: #10b981; font-weight: bold; }
-        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
-        th { background-color: #f3f4f6; padding: 0.75rem; text-align: left; font-weight: 700; border: 1px solid #e5e7eb; }
-        td { padding: 0.75rem; border: 1px solid #e5e7eb; }
+        .content-section h2 { font-size: 1.875rem; font-weight: 900; margin-top: 2rem; margin-bottom: 1rem; color: #1e1b4b; }
+        .content-section h3 { font-size: 1.5rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #312e81; }
+        .content-section p { margin-bottom: 1rem; line-height: 1.6; color: #374151; }
+        .content-section ul { margin-bottom: 1rem; list-style-type: disc; padding-left: 1.5rem; }
+        .content-section li { margin-bottom: 0.5rem; }
+        .custom-table-wrapper { overflow-x: auto; margin: 1.5rem 0; }
+        .custom-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+        .custom-table th { background: #f3f4f6; padding: 0.75rem; text-align: left; border: 1px solid #e5e7eb; }
+        .custom-table td { padding: 0.75rem; border: 1px solid #e5e7eb; }
     </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Casino non AAMS che accettano Postepay: siti 2026",
-      "description": "Guida 2026 ai casino non AAMS che accettano Postepay per giocatori italiani: depositi e prelievi, commissioni, tempi, limiti e alternative.",
-      "author": {
-        "@type": "Organization",
-        "name": "CasinoHub"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://larderialaconca.it"
-      }
-    }
-    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,38 +53,6 @@
             "@type": "Answer",
             "text": "I tempi includono una fase di approvazione interna del casinò e una successiva elaborazione del pagamento. In media, il processo può richiedere da pochi giorni lavorativi fino a una settimana, soprattutto al primo prelievo."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "Ci sono commissioni extra usando Postepay nei casinò stranieri?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Possono applicarsi costi legati al casinò, all’emittente della carta o alla conversione di valuta. Le commissioni non sono sempre evidenti e vanno verificate nelle condizioni di pagamento prima del deposito."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Postepay funziona anche sui casino non AAMS da mobile?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sì, nella maggior parte dei casi Postepay è utilizzabile anche da dispositivi mobili. L’esperienza dipende dall’ottimizzazione del sito e dai sistemi di sicurezza attivi per i pagamenti."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Cosa succede se il deposito con Postepay viene rifiutato?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Un rifiuto può dipendere da limiti della carta, controlli antifrode o dati non corretti. È consigliabile verificare saldo e limiti, quindi contattare il supporto del casinò o dell’emittente."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "I casino non AAMS che accettano Postepay sono sicuri?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La sicurezza varia in base all’operatore, alla licenza posseduta e alle misure tecniche adottate. I casino non AAMS che accettano Postepay possono essere affidabili, ma è importante valutare attentamente la sicurezza dei pagamenti e i termini prima di registrarsi."
-          }
         }
       ]
     }
@@ -114,13 +66,12 @@
                     <i data-lucide="shield-check" class="text-emerald-400"></i>CASINO<span class="text-emerald-400 font-normal">HUB</span>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
-                    <a href="#" class="hover:text-emerald-400 transition">Casino Online</a>
-                    <a href="#" class="hover:text-emerald-400 transition">Bonus</a>
-                    <a href="#" class="hover:text-emerald-400 transition">Giochi Live</a>
-                    <a href="#" class="hover:text-emerald-400 transition">Metodi Pagamento</a>
+                    <a href="#guida" class="hover:text-emerald-400 transition">Guida Postepay</a>
+                    <a href="#bonus" class="hover:text-emerald-400 transition">Bonus</a>
+                    <a href="#faq" class="hover:text-emerald-400 transition">FAQ</a>
                 </div>
                 <div class="hidden md:block">
-                    <button class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2 rounded-full font-bold transition transform hover:scale-105">LOGIN</button>
+                    <a href="https://tinyurl.com/4ys4mzsr" rel="nofollow" class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2 rounded-full font-bold transition transform hover:scale-105 inline-block">GIOCA ORA</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button onclick="toggleMenu()" id="menu-btn"><i data-lucide="menu" class="w-8 h-8"></i></button>
@@ -128,10 +79,10 @@
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-indigo-900 px-4 py-4 space-y-4 border-t border-indigo-800">
-            <a href="#" class="block font-bold">Casino Online</a>
-            <a href="#" class="block font-bold">Bonus</a>
-            <a href="#" class="block font-bold">Metodi Pagamento</a>
-            <button class="w-full bg-emerald-500 py-3 rounded-lg font-bold">LOGIN</button>
+            <a href="#guida" class="block font-bold">Guida Postepay</a>
+            <a href="#bonus" class="block font-bold">Bonus</a>
+            <a href="#faq" class="block font-bold">FAQ</a>
+            <a href="https://tinyurl.com/4ys4mzsr" rel="nofollow" class="w-full bg-emerald-500 py-3 rounded-lg font-bold text-center block">GIOCA ORA</a>
         </div>
     </nav>
 
@@ -140,18 +91,18 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-2/3 text-center md:text-left">
                     <nav class="flex justify-center md:justify-start gap-2 text-xs opacity-70 mb-6 uppercase tracking-widest">
-                        <a href="#">Home</a><span>/</span><a href="#">Metodi di Deposito</a><span>/</span><span class="text-emerald-400">Postepay</span>
+                        <a href="#">Home</a><span>/</span><a href="#">Metodi di Deposito</a><span>/</span><span class="text-emerald-400">Postepay Non AAMS</span>
                     </nav>
                     <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">Casino non AAMS che accettano <span class="text-emerald-400 underline decoration-indigo-400">Postepay</span> per giocatori italiani</h1>
                     <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl">Questa guida offre una panoramica informativa sui casino non AAMS che accettano Postepay, pensata per giocatori italiani che già utilizzano questa carta prepagata nella vita quotidiana.</p>
                     <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm"><i data-lucide="globe" class="w-4 h-4 text-emerald-400"></i>Licenze Internazionali</div>
-                        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm"><i data-lucide="credit-card" class="w-4 h-4 text-yellow-400"></i>Postepay Ready</div>
+                        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>Aggiornato 2026</div>
+                        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm"><i data-lucide="zap" class="w-4 h-4 text-yellow-400"></i>Depositi Istantanei</div>
                     </div>
                 </div>
                 <div class="md:w-1/3 hidden md:block relative">
                     <div class="floating">
-                        <img src="https://images.unsplash.com/photo-1518893063132-36e46dbe2428?auto=format&fit=crop&q=80&w=400" alt="Casino Cards" class="rounded-2xl shadow-2xl border-4 border-white/20">
+                        <img src="https://images.unsplash.com/photo-1518893063132-36e46dbe2428?auto=format&fit=crop&q=80&w=400" alt="Casino Postepay" class="rounded-2xl shadow-2xl border-4 border-white/20">
                     </div>
                 </div>
             </div>
@@ -159,173 +110,458 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
-        <section class="lg:w-3/4 prose max-w-none">
-            
-            <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100 mb-12">
-                <p class="text-indigo-900 font-medium italic m-0">L’obiettivo è chiarire se e in che modo Postepay può essere impiegata su piattaforme di gioco straniere, includendo le novità che caratterizzano l’esperienza complessiva e gli aspetti da valutare prima di scegliere un sito. Il contenuto mantiene un taglio neutrale ed esplicativo e non costituisce consulenza legale né materiale promozionale.</p>
+        <section class="lg:w-3/4">
+            <div id="bonus" class="flex items-center justify-between mb-8 border-b pb-4 border-gray-200">
+                <h2 class="text-2xl font-bold flex items-center gap-2 m-0"><i data-lucide="award" class="text-indigo-600"></i>Migliori Siti Consigliati 2026</h2>
+                <div class="text-xs font-bold text-gray-400 uppercase">Verificati</div>
             </div>
 
-            <div class="flex items-center justify-between mb-8 border-b pb-4 border-gray-200">
-                <h2 class="text-2xl font-bold flex items-center gap-2 m-0 border-none p-0"><i data-lucide="award" class="text-indigo-600"></i>Piattaforme Consigliate 2026</h2>
-                <div class="text-xs font-bold text-gray-400 uppercase">Aggiornato: 2026</div>
-            </div>
-
-            <div class="space-y-6 not-prose mb-12">
+            <div class="space-y-6 mb-12">
+                <!-- Brand 1: Millioner -->
                 <div class="bg-white border-2 border-indigo-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all card-hover flex flex-col md:flex-row">
                     <div class="md:w-1/4 p-6 flex items-center justify-center bg-gray-50 border-r border-gray-100">
                         <div class="text-center">
-                            <div class="w-20 h-20 bg-indigo-600 rounded-xl mx-auto mb-2 flex items-center justify-center text-white font-black text-2xl">C1</div>
-                            <div class="flex text-yellow-400 justify-center">
-                                <i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i>
-                            </div>
+                            <div class="w-20 h-20 bg-indigo-600 rounded-xl mx-auto mb-2 flex items-center justify-center text-white font-black text-2xl">M</div>
+                            <div class="flex text-yellow-400 justify-center"><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i></div>
                         </div>
                     </div>
                     <div class="md:w-1/2 p-6">
-                        <div class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full mb-3">TOP RATED</div>
-                        <h3 class="text-xl font-black mb-2">Premium Global Casino</h3>
-                        <p class="text-gray-600 text-sm mb-4">Bonus esclusivo fino a 1.500€ + Supporto Postepay Evolution</p>
-                        <ul class="text-xs text-gray-500 space-y-1">
-                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 text-emerald-500"></i> Licenza Internazionale Sicura</li>
-                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 text-emerald-500"></i> Deposito Postepay Istantaneo</li>
+                        <div class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-3">TOP RATED</div>
+                        <h3 class="text-xl font-black mb-2 m-0">Millioner Casino</h3>
+                        <p class="text-gray-600 text-sm mb-4">Bonus esclusivo per depositi Postepay. Ampia selezione di slot e tavoli live.</p>
+                        <ul class="text-xs text-gray-500 space-y-1 list-none p-0 m-0">
+                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 text-emerald-500"></i> Accetta Postepay Standard & Evolution</li>
+                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 text-emerald-500"></i> Prelievi rapidi approvati</li>
                         </ul>
                     </div>
                     <div class="md:w-1/4 p-6 flex flex-col justify-center gap-3 bg-indigo-50/30">
-                        <a href="#" class="bg-emerald-500 hover:bg-emerald-600 text-white text-center py-3 rounded-xl font-black text-lg transition shadow-lg shadow-emerald-200">VISITA SITO</a>
-                        <a href="#" class="text-center text-xs text-gray-500 underline">Info Pagamenti</a>
+                        <a href="https://tinyurl.com/4ys4mzsr" rel="nofollow" class="bg-emerald-500 hover:bg-emerald-600 text-white text-center py-3 rounded-xl font-black text-lg transition shadow-lg shadow-emerald-200">VISITA</a>
+                    </div>
+                </div>
+
+                <!-- Brand 2: Roulettino -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all card-hover flex flex-col md:flex-row">
+                    <div class="md:w-1/4 p-6 flex items-center justify-center bg-gray-50 border-r border-gray-100">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-red-600 rounded-xl mx-auto mb-2 flex items-center justify-center text-white font-black text-2xl">R</div>
+                            <div class="flex text-yellow-400 justify-center"><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i></div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-3">POPOLARE</div>
+                        <h3 class="text-xl font-black mb-2 m-0">Roulettino</h3>
+                        <p class="text-gray-600 text-sm mb-4">Ottimo per il gioco live. Cashback settimanale per utenti Postepay.</p>
+                        <ul class="text-xs text-gray-500 space-y-1 list-none p-0 m-0">
+                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 text-emerald-500"></i> Interfaccia mobile eccellente</li>
+                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 text-emerald-500"></i> Supporto 24/7 in italiano</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/4 p-6 flex flex-col justify-center gap-3">
+                        <a href="https://tinyurl.com/4ys4mzsr" rel="nofollow" class="bg-emerald-500 hover:bg-emerald-600 text-white text-center py-3 rounded-xl font-black text-lg transition">VISITA</a>
+                    </div>
+                </div>
+
+                <!-- Brand 3: Wyns -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all card-hover flex flex-col md:flex-row">
+                    <div class="md:w-1/4 p-6 flex items-center justify-center bg-gray-50 border-r border-gray-100">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-emerald-600 rounded-xl mx-auto mb-2 flex items-center justify-center text-white font-black text-2xl">W</div>
+                            <div class="flex text-yellow-400 justify-center"><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star" class="w-4 fill-current"></i><i data-lucide="star-half" class="w-4 fill-current"></i></div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <div class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full mb-3">NUOVO</div>
+                        <h3 class="text-xl font-black mb-2 m-0">Wyns Casino</h3>
+                        <p class="text-gray-600 text-sm mb-4">Centinaia di slot non AAMS. Deposito minimo 10€ con Postepay.</p>
+                        <ul class="text-xs text-gray-500 space-y-1 list-none p-0 m-0">
+                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 text-emerald-500"></i> Registrazione veloce</li>
+                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 text-emerald-500"></i> Bonus senza deposito disponibili</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/4 p-6 flex flex-col justify-center gap-3">
+                        <a href="https://tinyurl.com/4ys4mzsr" rel="nofollow" class="bg-emerald-500 hover:bg-emerald-600 text-white text-center py-3 rounded-xl font-black text-lg transition">VISITA</a>
                     </div>
                 </div>
             </div>
 
-            <h2>Panoramica sui casino non AAMS che accettano Postepay</h2>
-            <p>Questa sezione presenta una guida pratica e aggiornata dedicata ai casino non AAMS che accettano Postepay, pensata per giocatori italiani che utilizzano già carte prepagate come metodo di pagamento abituale. L’obiettivo è chiarire come Postepay viene generalmente accettata nei casinò non AAMS, quale tipo di esperienza ci si può attendere e quali elementi meritano attenzione prima di registrarsi su una piattaforma estera.</p>
-            <p>Il testo affronta le principali incertezze, tra cui il timore di non ricevere le vincite, la difficoltà di usare una Postepay italiana su siti stranieri e i dubbi sul quadro normativo. Vengono fornite informazioni di carattere generale su sicurezza, metodi di pagamento, tempi e costi tipici, senza anticipare dettagli operativi. L’approccio resta informativo e neutrale e non costituisce consulenza legale né contenuto promozionale.</p>
+            <div id="guida" class="content-section bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-gray-100">
+                <p>L’obiettivo è chiarire se e in che modo Postepay può essere impiegata su piattaforme di gioco straniere, includendo le novità che caratterizzano l’esperienza complessiva e gli aspetti da valutare prima di scegliere un sito. Vengono richiamate le principali preoccupazioni, come la sicurezza dei pagamenti, l’affidabilità dei prelievi e i dubbi legati ai casinò non AAMS, senza anticipare soluzioni o confronti. Il contenuto mantiene un taglio neutrale ed esplicativo e non costituisce consulenza legale né materiale promoziale.</p>
 
-            <h2>Perché i giocatori italiani cercano casino non AAMS con Postepay</h2>
-            <p>Il profilo tipico riguarda giocatori italiani che utilizzano già Postepay per acquisti online e preferiscono mantenere lo stesso metodo anche nei casinò stranieri. La familiarità con una carta prepagata consente maggiore controllo del budget e una gestione più chiara delle transazioni, soprattutto in presenza di limiti di spesa personali. Questa continuità riduce l’attrito iniziale e rende più semplice l’accesso a un conto di gioco su piattaforme non AAMS.</p>
-            <p>Le principali criticità riguardano pagamenti bloccati, doppie conversioni di valuta, conti temporaneamente sospesi e verifiche richieste al momento del prelievo. A ciò si aggiunge la difficoltà di interagire con supporto in lingua straniera e di comprendere procedure non sempre intuitive. L’analisi prende in considerazione queste preoccupazioni e chiarisce criteri di sicurezza, rischi e aspettative realistiche sui prelievi, collegando l’uso di Postepay alla ricerca di opzioni non AAMS percepite come più flessibili ma da valutare con attenzione.</p>
+                <h2>Panoramica sui casino non AAMS che accettano Postepay</h2>
+                <p>Questa sezione presenta una guida pratica e aggiornata dedicata ai casino non AAMS che accettano Postepay, pensata per giocatori italiani che utilizzano già carte prepagate come metodo di pagamento abituale. L’obiettivo è chiarire come Postepay viene generalmente accettata nei casinò non AAMS, quale tipo di esperienza ci si può attendere e quali elementi meritano attenzione prima di registrarsi su una piattaforma estera.</p>
+                <p>Il testo affronta le principali incertezze, tra cui il timore di non ricevere le vincite, la difficoltà di usare una Postepay italiana su siti stranieri e i dubbi sul quadro normativo. Vengono fornite informazioni di carattere generale su sicurezza, metodi di pagamento, tempi e costi tipici, senza anticipare dettagli operativi. L’approccio resta informativo e neutrale e non costituisce consulenza legale né contenuto promoziale.</p>
 
-            <h2>Cosa sono i casino non AAMS e come funziona Postepay</h2>
-            <p>Con l’espressione casino non AAMS si indicano casinò online stranieri che operano senza licenza ADM, ma con una licenza rilasciata da autorità estere. Queste piattaforme fanno riferimento a una diversa giurisdizione e seguono regole proprie del paese in cui sono autorizzate. La presenza di una licenza internazionale non implica automaticamente illegalità, ma segnala un modello regolatorio diverso da quello italiano. La valutazione dipende dal quadro normativo applicabile e dalla posizione del giocatore, senza che ciò costituisca un parere legale.</p>
-            <p>Postepay è una carta prepagata emessa da Poste Italiane, spesso collegata ai circuiti Visa o Mastercard, utilizzata da molti utenti italiani per i pagamenti online. Nei casinò non AAMS, Postepay viene in genere trattata come una carta di debito standard, soprattutto nei casino online stranieri che accettano pagamenti su circuiti internazionali. Questa impostazione consente depositi simili a quelli effettuati con altre carte, preparando il contesto per approfondimenti successivi su sicurezza, controlli e modalità operative.</p>
+                <h2>Perché i giocatori italiani cercano casino non AAMS con Postepay</h2>
+                <p>Il profilo tipico riguarda giocatori italiani che utilizzano già Postepay per acquisti online e preferiscono mantenere lo stesso metodo anche nei casinò stranieri. La familiarità con una carta prepagata consente maggiore controllo del budget e una gestione più chiara delle transazioni, soprattutto in presenza di limiti di spesa personali. Questa continuità riduce l’attrito iniziale e rende più semplice l’accesso a un conto di gioco su piattaforme non AAMS.</p>
+                <p>Le principali criticità riguardano pagamenti bloccati, doppie conversioni di valuta, conti temporaneamente sospesi e verifiche richieste al momento del prelievo. A ciò si aggiunge la difficoltà di interagire con supporto in lingua straniera e di comprendere procedure non sempre intuitive. L’analisi prende in considerazione queste preoccupazioni e chiarisce criteri di sicurezza, rischi e aspettative realistiche sui prelievi, collegando l’uso di Postepay alla ricerca di opzioni non AAMS percepite come più flessibili ma da valutare con attenzione.</p>
 
-            <h2>Tipologie di Postepay accettate nei casinò online stranieri</h2>
-            <p>Nei casinò online stranieri vengono in genere utilizzate diverse versioni di Postepay, tra cui Postepay Standard, Postepay Evolution e la Postepay virtuale. Queste soluzioni sono spesso riconosciute come carta Visa o carta Mastercard, in modo simile alle comuni carte di credito o di debito. L’accettazione può però variare in base agli operatori, ai processori di pagamento e alle politiche interne dei siti. Da qui nasce il timore che una specifica Postepay non funzioni o venga rifiutata dopo la registrazione, rendendo necessaria una verifica preventiva delle opzioni disponibili.</p>
+                <h2>Cosa sono i casino non AAMS e come funziona Postepay</h2>
+                <p>Con l’espressione casino non AAMS si indicano casinò online stranieri che operano senza licenza ADM, ma con una licenza rilasciata da autorità estere. Queste piattaforme fanno riferimento a una diversa giurisdizione e seguono regole proprie del paese in cui sono autorizzate. La presenza di una licenza internazionale non implica automaticamente illegalità, ma segnala un modello regolatorio diverso da quello italiano. La valutazione dipende dal quadro normativo applicabile e dalla posizione del giocatore, senza che ciò costituisca un parere legale.</p>
+                <p>Postepay è una carta prepagata emessa da Poste Italiane, spesso collegata ai circuiti Visa o Mastercard, utilizzata da molti utenti italiani per i pagamenti online. Nei casinò non AAMS, Postepay viene in genere trattata come una carta di debito standard, soprattutto nei casino online stranieri che accettano pagamenti su circuiti internazionali. Questa impostazione consente depositi simili a quelli effettuati con altre carte, preparando il contesto per approfondimenti successivi su sicurezza, controlli e modalità operative.</p>
 
-            <h2>Perché Postepay è così usata nei casino non AAMS</h2>
-            <p>Postepay è spesso scelta per i vantaggi legati alla semplicità d’uso e alla gestione del denaro. La possibilità di ricarica presso uffici postali e punti vendita fisici rende questa carta accessibile a un pubblico ampio. La separazione dal conto bancario principale facilita il controllo delle spese e introduce controlli più chiari sul budget destinato al gioco. Inoltre, l’ampia accettazione nei pagamenti online contribuisce a una percezione di praticità e continuità.</p>
-            <p>Nei casino non AAMS, molti operatori esteri supportano i depositi con carta sui circuiti internazionali, includendo spesso Postepay. L’uso della stessa carta impiegata quotidianamente offre comfort psicologico e una sensazione di familiarità. Restano tuttavia alcune limitazioni, come limiti di utilizzo della carta e possibili blocchi da parte dell’emittente per transazioni legate al gioco, aspetti da considerare prima della scelta.</p>
+                <h2>Tipologie di Postepay accettate nei casinò online stranieri</h2>
+                <p>Nei casinò online stranieri vengono in genere utilizzate diverse versioni di Postepay, tra cui Postepay Standard, Postepay Evolution e la Postepay virtuale. Queste soluzioni sono spesso riconosciute come carta Visa o carta Mastercard, in modo simile alle comuni carte di credito o di debito. L’accettazione può però variare in base agli operatori, ai processori di pagamento e alle politiche interne dei siti. Da qui nasce il timore che una specifica Postepay non funzioni o venga rifiutata dopo la registrazione, rendendo necessaria una verifica preventiva delle opzioni disponibili.</p>
 
-            <h2>Pro e contro di Postepay nei casino non AAMS</h2>
-            <p>L’uso di Postepay nei casinò stranieri presenta vantaggi pratici, ma anche limiti da valutare prima di effettuare un pagamento. La natura prepagata aiuta a gestire le transazioni, ma alcune operazioni di gioco possono essere trattate in modo diverso dagli emittenti.</p>
-            
-            <h3>Vantaggi</h3>
-            <ul>
-                <li>Depositi generalmente rapidi</li>
-                <li>Controllo del budget tramite saldo prepagato</li>
-                <li>Metodo familiare per molti utenti italiani</li>
-                <li>Compatibilità con numerosi siti di gioco</li>
-            </ul>
+                <h2>Perché Postepay è così usata nei casino non AAMS</h2>
+                <p>Postepay è spesso scelta per i vantaggi legati alla semplicità d’uso e alla gestione del denaro. La possibilità di ricarica presso uffici postali e punti vendita fisici rende questa carta accessibile a un pubblico ampio. La separazione dal conto bancario principale facilita il controllo delle spese e introduce controlli più chiari sul budget destinato al gioco. Inoltre, l’ampia accettazione nei pagamenti online contribuisce a una percezione di praticità e continuità.</p>
+                <p>Nei casino non AAMS, molti operatori esteri supportano i depositi con carta sui circuiti internazionali, includendo spesso Postepay. L’uso della stessa carta impiegata quotidianamente offre comfort psicologico e una sensazione di familiarità. Restano tuttavia alcune limitazioni, come limiti di utilizzo della carta e possibili blocchi da parte dell’emittente per transazioni legate al gioco, aspetti da considerare prima della scelta.</p>
 
-            <h3>Limiti</h3>
-            <ul>
-                <li>Possibili commissioni Postepay su alcune operazioni</li>
-                <li>Limiti di ricarica e di spesa mensili</li>
-                <li>Pagamenti rifiutati da alcuni processori</li>
-                <li>Richiesta di verifica dell’identità per importi più elevati</li>
-            </ul>
+                <h2>Pro e contro di Postepay nei casino non AAMS</h2>
+                <p>L’uso di Postepay nei casinò stranieri presenta vantaggi pratici, ma anche limiti da valutare prima di effettuare un pagamento. La natura prepagata aiuta a gestire le transazioni, ma alcune operazioni di gioco possono essere trattate in modo diverso dagli emittenti.</p>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-emerald-50 p-4 rounded-xl">
+                        <h4 class="font-bold text-emerald-800 mb-2">Vantaggi</h4>
+                        <ul class="text-sm text-emerald-700 list-none p-0">
+                            <li><i data-lucide="check" class="inline w-4 h-4 mr-1"></i> Depositi generalmente rapidi</li>
+                            <li><i data-lucide="check" class="inline w-4 h-4 mr-1"></i> Controllo del budget tramite saldo prepagato</li>
+                            <li><i data-lucide="check" class="inline w-4 h-4 mr-1"></i> Metodo familiare per molti utenti italiani</li>
+                            <li><i data-lucide="check" class="inline w-4 h-4 mr-1"></i> Compatibilità con numerosi siti di gioco</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-xl">
+                        <h4 class="font-bold text-red-800 mb-2">Limiti</h4>
+                        <ul class="text-sm text-red-700 list-none p-0">
+                            <li><i data-lucide="x" class="inline w-4 h-4 mr-1"></i> Possibili commissioni Postepay su alcune operazioni</li>
+                            <li><i data-lucide="x" class="inline w-4 h-4 mr-1"></i> Limiti di ricarica e di spesa mensili</li>
+                            <li><i data-lucide="x" class="inline w-4 h-4 mr-1"></i> Pagamenti rifiutati da alcuni processori</li>
+                            <li><i data-lucide="x" class="inline w-4 h-4 mr-1"></i> Richiesta di verifica dell’identità per importi più elevati</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h2>Come depositare nei casino non AAMS con Postepay</h2>
-            <p>Il deposito con Postepay nei casinò non AAMS segue in genere una procedura standard. Dopo la registrazione e l’apertura del conto, l’area cassa consente di selezionare il deposito tramite carta sui circuiti internazionali. Vengono inseriti i dati della Postepay e completati i controlli di sicurezza previsti, come 3D Secure o codice OTP, prima della conferma finale. L’accredito risulta spesso immediato, con importi minimi e massimi definiti dalle condizioni del sito.</p>
-            <p>Le preoccupazioni più comuni riguardano l’inserimento dei dati su piattaforme straniere e il rischio di transazioni non riuscite. Per questo motivo è rilevante verificare che il sito utilizzi connessioni HTTPS e gateway di pagamento riconosciuti. In alcuni casi, soprattutto al primo versamento, i sistemi antifrode possono richiedere verifiche aggiuntive, generando incertezza. La comprensione preventiva di questi passaggi riduce l’ansia operativa e aiuta a distinguere tra normali controlli di sicurezza e reali problemi di pagamento.</p>
+                <h2>Come depositare nei casino non AAMS con Postepay</h2>
+                <p>Il deposito con Postepay nei casinò non AAMS segue in genere una procedura standard. Dopo la registrazione e l’apertura del conto, l’area cassa consente di selezionare il deposito tramite carta sui circuiti internazionali. Vengono inseriti i dati della Postepay e completati i controlli di sicurezza previsti, come 3D Secure o codice OTP, prima della conferma finale. L’accredito risulta spesso immediato, con importi minimi e massimi definiti dalle condizioni del sito.</p>
+                <p>Le preoccupazioni più comuni riguardano l’inserimento dei dati su piattaforme straniere e il rischio di transazioni non riuscite. Per questo motivo è rilevante verificare che il sito utilizzi connessioni HTTPS e gateway di pagamento riconosciuti. In alcuni casi, soprattutto al primo versamento, i sistemi antifrode possono richiedere verifiche aggiuntive, generando incertezza. La comprensione preventiva di questi passaggi riduce l’ansia operativa e aiuta a distinguere tra normali controlli di sicurezza e reali problemi di pagamento.</p>
 
-            <h2>Tempi di deposito con Postepay nei casinò non AAMS</h2>
-            <p>I depositi effettuati con Postepay nei casinò non AAMS vengono di norma accreditati in modo immediato o entro pochi minuti. Nella maggior parte dei casi, il deposito risulta disponibile sul conto di gioco subito dopo la conferma della transazione. Possono verificarsi ritardi occasionali quando i sistemi di sicurezza attivano controlli aggiuntivi, soprattutto in fase di prima ricarica. In queste situazioni, l’accredito può richiedere più tempo, senza indicare necessariamente un problema, ma riflettendo procedure standard di verifica.</p>
+                <h2>Tempi di deposito con Postepay nei casinò non AAMS</h2>
+                <p>I depositi effettuati con Postepay nei casinò non AAMS vengono di norma accreditati in modo immediato o entro pochi minuti. Nella maggior parte dei casi, il deposito risulta disponibile sul conto di gioco subito dopo la conferma della transazione. Possono verificarsi ritardi occasionali quando i sistemi di sicurezza attivano controlli aggiuntivi, soprattutto in fase di prima ricarica. In queste situazioni, l’accredito può richiedere più tempo, senza indicare necessariamente un problema, ma riflettendo procedure standard di verifica.</p>
 
-            <h2>Come prelevare le vincite con Postepay nei casino non AAMS</h2>
-            <p>Nei casinò non AAMS, la possibilità di effettuare prelievi sulla stessa carta utilizzata per il deposito non è sempre garantita. In molti casi, Postepay consente il versamento iniziale, mentre il ritiro delle vincite segue procedure differenti. Dopo la registrazione, il giocatore deve completare la verifica documenti, accedere all’area cassa del conto e selezionare un metodo di prelievo disponibile, che può includere carte o soluzioni alternative.</p>
-            <p>Uno dei problemi più frequenti emerge quando, dopo depositi semplici e immediati, il prelievo su Postepay risulta non disponibile. In queste situazioni, il sistema indirizza verso altri metodi di pagamento, con tempi di elaborazione variabili. Per evitare sorprese, è rilevante controllare in anticipo quali opzioni di prelievo sono previste e se la carta utilizzata per il deposito può essere impiegata anche per incassare le vincite.</p>
+                <h2>Come prelevare le vincite con Postepay nei casino non AAMS</h2>
+                <p>Nei casinò non AAMS, la possibilità di effettuare prelievi sulla stessa carta utilizzata per il deposito non è sempre garantita. In molti casi, Postepay consente il versamento iniziale, mentre il ritiro delle vincite segue procedure differenti. Dopo la registrazione, il giocatore deve completare la verifica documenti, accedere all’area cassa del conto e selezionare un metodo di prelievo disponibile, che può includere carte o soluzioni alternative.</p>
+                <p>Uno dei problemi più frequenti emerge quando, dopo depositi semplici e immediati, il prelievo su Postepay risulta non disponibile. In queste situazioni, il sistema indirizza verso altri metodi di pagamento, con tempi di elaborazione variabili. Per evitare sorprese, è rilevante controllare in anticipo quali opzioni di prelievo sono previste e se la carta utilizzata per il deposito può essere impiegata anche per incassare le vincite.</p>
 
-            <h2>Tempi di prelievo con Postepay nei casinò stranieri</h2>
-            <p>I prelievi seguono in genere una fase iniziale di approvazione interna, che può durare da poche ore fino a due o tre giorni. In questo passaggio vengono effettuate verifiche manuali e controlli sulle transazioni. Dopo l’approvazione, il tempo di accredito sulla carta varia solitamente da uno a cinque giorni lavorativi. Il primo prelievo può richiedere più tempo a causa dei controlli sui documenti, spiegando perché il pagamento non risulta immediato.</p>
+                <h2>Tempi di prelievo con Postepay nei casinò stranieri</h2>
+                <p>I prelievi seguono in genere una fase iniziale di approvazione interna, che può durare da poche ore fino a due o tre giorni. In questo passaggio vengono effettuate verifiche manuali e controlli sulle transazioni. Dopo l’approvazione, il tempo di accredito sulla carta varia solitamente da uno a cinque giorni lavorativi. Il primo prelievo può richiedere più tempo a causa dei controlli sui documenti, spiegando perché il pagamento non risulta immediato.</p>
 
-            <h2>Cosa fare se il prelievo su Postepay non è disponibile</h2>
-            <p>Alcuni casinò non AAMS consentono l’uso di Postepay solo per il deposito, escludendola dai prelievi. In questi casi, il sistema propone altre opzioni, come portafogli elettronici, bonifico bancario o carte diverse. Durante la registrazione del conto, è utile selezionare almeno un’opzione alternativa per evitare situazioni di blocco. Questa precauzione riduce il rischio di restare senza una via chiara per incassare le vincite e semplifica la gestione delle richieste di pagamento.</p>
+                <h2>Cosa fare se il prelievo su Postepay non è disponibile</h2>
+                <p>Alcuni casinò non AAMS consentono l’uso di Postepay solo per il deposito, escludendola dai prelievi. In questi casi, il sistema propone altre opzioni, come portafogli elettronici, bonifico bancario o carte diverse. Durante la registrazione del conto, è utile selezionare almeno un’opzione alternativa per evitare situazioni di blocco. Questa precauzione riduce il rischio di restare senza una via chiara per incassare le vincite e semplifica la gestione delle richieste di pagamento.</p>
 
-            <h2>Commissioni, limiti e valuta usando Postepay nei casino non AAMS</h2>
-            <p>L’utilizzo di Postepay nei casinò non AAMS può comportare diversi elementi di costo. Alcuni pagamenti prevedono commissioni applicate dal casinò per deposito o prelievo, mentre altre spese possono dipendere dall’emittente della carta. Se il conto di gioco non è in euro, può intervenire anche il tasso di cambio, con costi aggiuntivi legati alla conversione di valuta. Questi aspetti alimentano il timore di spese non previste e di transazioni rifiutate.</p>
-            <p>I limiti rappresentano un altro fattore centrale. Ogni casinò stabilisce importi minimi e massimi per deposito e prelievo, validi per singola operazione o su base giornaliera e mensile. A questi si sommano i limiti della Postepay stessa. Per ridurre i rischi, è utile verificare le condizioni di pagamento del sito e la documentazione ufficiale della carta, iniziando con importi di prova contenuti.</p>
+                <h2>Commissioni, limiti e valuta usando Postepay nei casino non AAMS</h2>
+                <p>L’utilizzo di Postepay nei casinò non AAMS può comportare diversi elementi di costo. Alcuni pagamenti prevedono commissioni applicate dal casinò per deposito o prelievo, mentre altre spese possono dipendere dall’emittente della carta. Se il conto di gioco non è in euro, può intervenire anche il tasso di cambio, con costi aggiuntivi legati alla conversione di valuta. Questi aspetti alimentano il timore di spese non previste e di transazioni rifiutate.</p>
+                <p>I limiti rappresentano un altro fattore centrale. Ogni casinò stabilisce importi minimi e massimi per deposito e prelievo, validi per singola operazione o su base giornaliera e mensile. A questi si sommano i limiti della Postepay stessa. Per ridurre i rischi, è utile verificare le condizioni di pagamento del sito e la documentazione ufficiale della carta, iniziando con importi di prova contenuti.</p>
 
-            <div class="overflow-x-auto">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Voce</th>
-                            <th>Dove può applicarsi</th>
-                            <th>Cosa controllare</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Commissione deposito/prelievo</td>
-                            <td>Casinò</td>
-                            <td>T&C sui pagamenti</td>
-                        </tr>
-                        <tr>
-                            <td>Conversione valuta</td>
-                            <td>Circuito carta / cambio</td>
-                            <td>Valuta del conto</td>
-                        </tr>
-                        <tr>
-                            <td>Limiti transazione</td>
-                            <td>Casinò / Postepay</td>
-                            <td>Estratto e soglie della carta</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="custom-table-wrapper">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Voce</th>
+                                <th>Dove può applicarsi</th>
+                                <th>Cosa controllare</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Commissione deposito/prelievo</td>
+                                <td>Casinò</td>
+                                <td>T&C sui pagamenti</td>
+                            </tr>
+                            <tr>
+                                <td>Conversione valuta</td>
+                                <td>Circuito carta / cambio</td>
+                                <td>Valuta del conto</td>
+                            </tr>
+                            <tr>
+                                <td>Limiti transazione</td>
+                                <td>Casinò / Postepay</td>
+                                <td>Estratto e soglie della carta</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Come evitare sorprese su commissioni e conversioni</h3>
+                <p>Per ridurre il rischio di costi nascosti, è utile adottare alcune precauzioni prima di effettuare pagamenti con Postepay. La scelta di conti di gioco in valuta in euro limita le conversioni, mentre la lettura attenta delle condizioni di pagamento chiarisce eventuali commissioni applicate. Anche i limiti operativi incidono sull’importo finale accreditato.</p>
+                <ul>
+                    <li>Preferire casinò con conto in euro</li>
+                    <li>Verificare la sezione costi prima del primo deposito</li>
+                    <li>Evitare prelievi molto piccoli e frequenti</li>
+                    <li>Controllare l’estratto Postepay per addebiti aggiuntivi</li>
+                </ul>
+                <p>Queste indicazioni aiutano a mantenere maggiore controllo sulle spese e a prevenire addebiti inattesi.</p>
+
+                <h2>Sicurezza e aspetti legali dei casino non AAMS con Postepay</h2>
+                <p>La sicurezza nei casinò non AAMS dipende da diversi fattori, tra cui la licenza posseduta dall’operatore, le misure tecniche adottate e la gestione responsabile dei dati e dei pagamenti. Molte piattaforme operano sotto autorizzazioni estere, come quelle rilasciate da autorità internazionali, che regolano aspetti quali correttezza dei giochi, protezione dei dati e procedure di pagamento. Queste licenze si collocano in una diversa giurisdizione rispetto a quella ADM, con standard che possono variare.</p>
+                <p>Dal punto di vista legale, i casinò non AAMS funzionano secondo normative straniere. Ciò comporta alcuni rischi per i giocatori italiani, come una tutela più limitata in caso di controversie o la possibilità di blocchi dei siti e dei pagamenti. L’analisi invita a considerare questi elementi con attenzione, senza offrire consulenza legale. È consigliabile informarsi sulle regole vigenti in Italia e accettare che l’accesso a tali piattaforme avviene sotto responsabilità individuale, valutando con equilibrio benefici e criticità.</p>
+
+                <h2>Segnali di affidabilità nei casino non AAMS che accettano Postepay</h2>
+                <p>La scelta tra numerose piattaforme straniere può creare incertezza, soprattutto quando gli operatori non sono conosciuti. Alcuni segnali aiutano a distinguere un casinò non AAMS più affidabile da realtà poco trasparenti. La presenza di una licenza internazionale valida, informazioni societarie accessibili e condizioni di pagamento chiare riducono il rischio di problemi e truffe.</p>
+                <p><strong>Checklist di affidabilità:</strong></p>
+                <ul>
+                    <li>Licenza internazionale indicata in modo visibile</li>
+                    <li>Dati della società facilmente reperibili</li>
+                    <li>Connessione protetta tramite HTTPS/SSL</li>
+                    <li>Termini e condizioni su bonus e pagamenti trasparenti</li>
+                    <li>Supporto clienti attivo e raggiungibile</li>
+                    <li>Collaborazioni con provider di giochi noti</li>
+                </ul>
+                <p>Questi elementi offrono un riferimento pratico per valutare rapidamente l’affidabilità di un sito prima della registrazione.</p>
+
+                <h2>Giochi disponibili nei casino non AAMS che accettano Postepay</h2>
+                <p>Nei casinò non AAMS che accettano Postepay è presente una gamma ampia di titoli, paragonabile a quella delle piattaforme regolamentate. L’offerta include slot machine, slot con Jackpot, giochi da tavolo come roulette, Blackjack, poker e baccarat, oltre a sezioni di casinò live con dealer reali. In alcuni casi sono disponibili anche Crash games e game show interattivi.</p>
+                <p>L’utilizzo di Postepay come metodo di pagamento non limita l’accesso a specifiche categorie di giochi. La confusione nasce spesso dalle regole sui bonus, che possono escludere determinati titoli dal conteggio dei requisiti di puntata. La varietà dell’offerta resta uno dei motivi per cui molti utenti guardano oltre i siti AAMS, cercando esperienze di gioco più ampie e differenziate, pur mantenendo modalità di pagamento familiari.</p>
+
+                <h3>Esperienza di gioco live nei casino non AAMS</h3>
+                <p>Nei casinò online non AAMS, l’esperienza di gioco live si basa su tavoli con dealer reali e streaming in tempo reale. I tavoli live di roulette live e Blackjack live seguono standard simili a quelli dei mercati regolamentati. Il saldo ricaricato con Postepay viene utilizzato senza differenze rispetto ad altri giochi, offrendo continuità nelle esperienze di gioco. Questo riduce il timore che le piattaforme straniere non garantiscano ambienti professionali o sessioni eque.</p>
+
+                <h2>Bonus nei casino non AAMS per chi paga con Postepay</h2>
+                <p>Nei casinò non AAMS, i bonus sono generalmente collegati al deposito e non a uno specifico metodo di pagamento. I versamenti effettuati con Postepay rientrano di norma tra quelli idonei, al pari di altre carte accettate. Le promozioni più comuni includono bonus di benvenuto, free spins, offerte di cashback e programmi VIP.</p>
+                <p>L’interesse verso questi incentivi si accompagna spesso al timore di requisiti di puntata elevati o di metodi esclusi. Per questo motivo è rilevante verificare se i depositi con carta, inclusa Postepay, partecipano alle offerte e quali condizioni si applicano prima di attivare un bonus.</p>
+
+                <h3>Requisiti di puntata e restrizioni sui bonus</h3>
+                <p>I bonus prevedono spesso requisiti di puntata che stabiliscono quante volte il saldo bonus deve essere giocato prima del prelievo. Le condizioni includono percentuali diverse di contributo per i giochi, limiti di puntata massima e titoli esclusi. In alcuni casi, specifici metodi di pagamento possono essere esclusi dalle promozioni. La mancata lettura delle restrizioni legate al deposito è una causa frequente di difficoltà nel prelievo delle vincite.</p>
+
+                <h2>Registrazione e verifica del conto nei casino non AAMS</h2>
+                <p>La registrazione nei casinò non AAMS richiede in genere l’inserimento dei dati personali, la creazione delle credenziali di accesso e la conferma tramite email o numero di telefono. Una volta completata l’apertura del conto, è possibile effettuare depositi, spesso anche con Postepay, senza verifiche immediate. Tuttavia, questa fase iniziale non sostituisce i successivi controlli.</p>
+                <p>La procedura di verifica identità, nota come KYC, diventa quasi sempre necessaria al momento del prelievo. I documenti richiesti includono un documento valido, una prova di indirizzo e, in alcuni casi, una foto della carta utilizzata. La mancata presentazione di questi elementi può bloccare i pagamenti in uscita. Comprendere in anticipo questi passaggi riduce il rischio di ritardi e chiarisce le aspettative legate alla gestione del conto.</p>
+
+                <h3>Associare la propria Postepay in modo sicuro</h3>
+                <p>L’associazione di Postepay al conto di gioco richiede alcune accortezze di base. Il titolare della carta deve coincidere con l’intestatario del conto e l’operazione va effettuata solo tramite connessione protetta. È preferibile evitare il salvataggio dei dati se il dispositivo è condiviso. In fase di controlli, alcuni casinò possono richiedere una verifica carta per confermare la proprietà, riducendo i rischi di uso improprio e proteggendo la sicurezza dati.</p>
+
+                <h2>Problemi comuni con Postepay nei casino non AAMS e come risolverli</h2>
+                <p>Durante l’utilizzo di Postepay nei casinò non AAMS possono emergere difficoltà operative che generano incertezza. Le cause più frequenti riguardano transazioni rifiutate, prelievi in attesa o richieste aggiuntive di verifica. In molti casi, questi eventi non indicano un problema definitivo, ma riflettono controlli di sicurezza o limiti tecnici superabili con azioni mirate.</p>
+                <div class="custom-table-wrapper">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Problema</th>
+                                <th>Soluzione</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Deposito rifiutato</td>
+                                <td>Verificare saldo e limiti della carta, riprovare o contattare il supporto</td>
+                            </tr>
+                            <tr>
+                                <td>Prelievo in attesa</td>
+                                <td>Controllare lo stato del conto e completare eventuali verifiche</td>
+                            </tr>
+                            <tr>
+                                <td>Limiti raggiunti</td>
+                                <td>Attendere il reset o utilizzare un metodo alternativo</td>
+                            </tr>
+                            <tr>
+                                <td>Nome non combacia</td>
+                                <td>Aggiornare i dati del conto per allinearli alla carta</td>
+                            </tr>
+                            <tr>
+                                <td>Richiesta di documenti extra</td>
+                                <td>Inviare i file richiesti per sbloccare l’operazione</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Supporto clienti: casino non AAMS o Poste Italiane?</h3>
+                <p>In caso di problemi, è utile distinguere a chi rivolgersi per ottenere informazioni corrette. Le questioni legate al conto, allo stato dei bonus o alle transazioni di prelievo rientrano di norma nella competenza del servizio clienti del casinò, spesso disponibile tramite chat live o email. Situazioni come carta bloccata, controlli di sicurezza o addebiti non riconosciuti vanno invece segnalate all’assistenza Postepay o all’emittente. Questa distinzione riduce i tempi di risposta e chiarisce le responsabilità.</p>
+
+                <h2>Alternative a Postepay nei casino non AAMS</h2>
+                <p>Quando Postepay non è disponibile o risulta poco pratica, esistono diverse opzioni di pagamenti utilizzate nei casinò non AAMS. I metodi più comuni includono portafogli elettronici come Skrill e Neteller, bonifico bancario, voucher prepagati, criptovalute e, dove supportati, Apple Pay o Google Pay. Ogni soluzione presenta differenze in termini di velocità, costi e livello di riservatezza, aspetti rilevanti per gli utenti italiani che cercano un’alternativa affidabile. Avere un metodo di riserva riduce l’impatto di rifiuti o limiti operativi legati alla carta.</p>
+                <div class="custom-table-wrapper">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Metodo</th>
+                                <th>Velocità deposito</th>
+                                <th>Velocità prelievo</th>
+                                <th>Possibili fee</th>
+                                <th>Limiti</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>E-wallet (Skrill, Neteller)</td>
+                                <td>Immediata</td>
+                                <td>Rapida</td>
+                                <td>Variabili</td>
+                                <td>Medi</td>
+                                <td>Ampia accettazione</td>
+                            </tr>
+                            <tr>
+                                <td>Bonifico bancario</td>
+                                <td>Lenta</td>
+                                <td>Lenta</td>
+                                <td>Possibili</td>
+                                <td>Elevati</td>
+                                <td>Tracciabilità</td>
+                            </tr>
+                            <tr>
+                                <td>Voucher prepagati</td>
+                                <td>Immediata</td>
+                                <td>Non disponibile</td>
+                                <td>Nessuna</td>
+                                <td>Bassi</td>
+                                <td>Solo deposito</td>
+                            </tr>
+                            <tr>
+                                <td>Criptovalute</td>
+                                <td>Rapida</td>
+                                <td>Rapida</td>
+                                <td>Rete</td>
+                                <td>Variabili</td>
+                                <td>Maggiore privacy</td>
+                            </tr>
+                            <tr>
+                                <td>Apple Pay / Google Pay</td>
+                                <td>Immediata</td>
+                                <td>Variabile</td>
+                                <td>Minime</td>
+                                <td>Medi</td>
+                                <td>Dipende dal sito</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>In quali casi è meglio non usare Postepay</h3>
+                <p>In alcune situazioni, Postepay può non essere la scelta più adatta. In presenza di prelievi di importo elevato, i limiti della carta possono rallentare o bloccare l’operazione. Anche nei casinò che non consentono pagamenti in uscita su carte, risulta necessario valutare altre opzioni. Gli utenti che privilegiano un prelievo veloce o un maggiore anonimato nei pagamenti possono orientarsi verso e-wallet o soluzioni alternative, adattando il metodo alle proprie esigenze operative.</p>
+
+                <h2>Gioco responsabile con Postepay nei casino non AAMS</h2>
+                <p>L’uso di una carta prepagata come Postepay può favorire un maggiore controllo delle spese, ma non elimina i rischi legati al gioco. Anche con limiti predefiniti, il giocatore resta esposto alla possibilità di perdere il controllo se le ricariche diventano frequenti. Per questo motivo è rilevante impostare soglie personali, monitorare le operazioni e fare pause regolari.</p>
+                <p>Alcuni casinò non AAMS mettono a disposizione strumenti interni come limiti di deposito o opzioni di autoesclusione, mentre restano utili anche risorse di supporto esterne. Queste misure aiutano a mantenere un approccio più consapevole e a prevenire comportamenti di gioco eccessivi.</p>
+
+                <h3>Consigli pratici per non esagerare con le ricariche</h3>
+                <p>Una gestione attenta di Postepay aiuta a mantenere il gioco entro limiti sostenibili. Definire regole personali e monitorare il conto riduce il rischio di spese impulsive e rafforza la gestione del denaro.</p>
+                <ul>
+                    <li>Stabilire un budget mensile dedicato al gioco</li>
+                    <li>Utilizzare Postepay solo con fondi extra, non destinati a spese essenziali</li>
+                    <li>Impostare uno stop-loss e rispettarlo</li>
+                    <li>Evitare di inseguire le perdite con nuove ricariche</li>
+                    <li>Fare pause regolari e uscire dal conto quando il budget è esaurito</li>
+                    <li>Controllare l’estratto Postepay per tenere traccia delle operazioni</li>
+                </ul>
+                <p>Queste indicazioni rendono l’utilizzo della carta più consapevole e controllato.</p>
+
+                <div id="faq" class="mt-12">
+                    <h2 class="text-3xl font-black mb-8">FAQ sui casino non AAMS che accettano Postepay</h2>
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <h4 class="font-bold text-indigo-900 mb-2">È legale per un giocatore italiano usare casino non AAMS con Postepay?</h4>
+                            <p class="text-sm text-gray-600 m-0">L’utilizzo di casinò non AAMS avviene su piattaforme regolate da licenze estere e rientra in una zona normativa diversa da quella ADM. La valutazione della legalità dipende dalla giurisdizione dell’operatore e dalla posizione del giocatore. Questo contenuto non fornisce consulenza legale e invita a informarsi sulle regole vigenti.</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <h4 class="font-bold text-indigo-900 mb-2">Posso prelevare le vincite direttamente sulla mia Postepay?</h4>
+                            <p class="text-sm text-gray-600 m-0">Non sempre. Molti siti consentono il deposito con Postepay, ma i prelievi con Postepay possono non essere disponibili. In questi casi vengono proposte alternative come e-wallet o bonifico.</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <h4 class="font-bold text-indigo-900 mb-2">Quali sono i tempi medi di prelievo con Postepay?</h4>
+                            <p class="text-sm text-gray-600 m-0">I tempi includono una fase di approvazione interna del casinò e una successiva elaborazione del pagamento. In media, il processo può richiedere da pochi giorni lavorativi fino a una settimana, soprattutto al primo prelievo.</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <h4 class="font-bold text-indigo-900 mb-2">Ci sono commissioni extra usando Postepay nei casinò stranieri?</h4>
+                            <p class="text-sm text-gray-600 m-0">Possono applicarsi costi legati al casinò, all’emittente della carta o alla conversione di valuta. Le commissioni non sono sempre evidenti e vanno verificate nelle condizioni di pagamento prima del deposito.</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <h4 class="font-bold text-indigo-900 mb-2">Postepay funziona anche sui casino non AAMS da mobile?</h4>
+                            <p class="text-sm text-gray-600 m-0">Sì, nella maggior parte dei casi Postepay è utilizzabile anche da dispositivi mobili. L’esperienza dipende dall’ottimizzazione del sito e dai sistemi di sicurezza attivi per i pagamenti.</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <h4 class="font-bold text-indigo-900 mb-2">Cosa succede se il deposito con Postepay viene rifiutato?</h4>
+                            <p class="text-sm text-gray-600 m-0">Un rifiuto può dipendere da limiti della carta, controlli antifrode o dati non corretti. È consigliabile verificare saldo e limiti, quindi contattare il supporto del casinò o dell’emittente.</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <h4 class="font-bold text-indigo-900 mb-2">I casino non AAMS che accettano Postepay sono sicuri?</h4>
+                            <p class="text-sm text-gray-600 m-0">La sicurezza varia in base all’operatore, alla licenza posseduta e alle misure tecniche adottate. I casino non AAMS che accettano Postepay possono essere affidabili, ma è importante valutare attentamente la sicurezza dei pagamenti e i termini prima di registrarsi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 p-8 bg-indigo-50 rounded-3xl border border-indigo-100">
+                    <h2 class="m-0 mb-4">Conclusioni: conviene usare Postepay nei casino non AAMS?</h2>
+                    <p>Postepay rappresenta una soluzione familiare e pratica per molti utenti italiani, grazie ai vantaggi legati al controllo della spesa e alla semplicità d’uso. Tuttavia, non tutti i casinò non AAMS la gestiscono allo stesso modo per depositi e prelievi, rendendo necessari controlli preliminari su licenza, condizioni di pagamento, limiti, commissioni e procedure KYC.</p>
+                    <p>L’utilizzo di casino non AAMS che accettano Postepay può risultare una scelta equilibrata quando le opzioni di incasso sono chiare e i requisiti trasparenti. In altri casi, metodi alternativi o piattaforme AAMS possono offrire maggiore tutela. Un approccio informato e responsabile resta centrale per una scelta consapevole del casinò.</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="lg:w-1/4 space-y-8">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <h3 class="font-black text-lg mb-4 flex items-center gap-2 m-0"><i data-lucide="trending-up" class="text-indigo-600"></i>Pagine Popolari</h3>
+                <ul class="space-y-3 list-none p-0 m-0">
+                    <li class="flex items-center gap-2 p-2 hover:bg-indigo-50 rounded-lg transition cursor-pointer">
+                        <i data-lucide="chevron-right" class="w-4 text-indigo-400"></i>
+                        <span class="text-sm font-medium">Migliori Casino non AAMS</span>
+                    </li>
+                    <li class="flex items-center gap-2 p-2 hover:bg-indigo-50 rounded-lg transition cursor-pointer">
+                        <i data-lucide="chevron-right" class="w-4 text-indigo-400"></i>
+                        <span class="text-sm font-medium">Bonus Senza Deposito 2026</span>
+                    </li>
+                    <li class="flex items-center gap-2 p-2 hover:bg-indigo-50 rounded-lg transition cursor-pointer">
+                        <i data-lucide="chevron-right" class="w-4 text-indigo-400"></i>
+                        <span class="text-sm font-medium">Slot Machine con Postepay</span>
+                    </li>
+                </ul>
             </div>
 
-            <h2>Come evitare sorprese su commissioni e conversioni</h2>
-            <p>Per ridurre il rischio di costi nascosti, è utile adottare alcune precauzioni prima di effettuare pagamenti con Postepay. La scelta di conti di gioco in valuta in euro limita le conversioni, mentre la lettura attenta delle condizioni di pagamento chiarisce eventuali commissioni applicate. Anche i limiti operativi incidono sull’importo finale accreditato.</p>
-            <ul>
-                <li>Preferire casinò con conto in euro</li>
-                <li>Verificare la sezione costi prima del primo deposito</li>
-                <li>Evitare prelievi molto piccoli e frequenti</li>
-                <li>Controllare l’estratto Postepay per addebiti aggiuntivi</li>
-            </ul>
+            <div class="bg-indigo-900 text-white rounded-2xl p-6 shadow-xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h3 class="font-black text-xl mb-2 italic m-0">Newsletter</h3>
+                    <p class="text-xs opacity-70 mb-4">Ricevi i bonus esclusivi Postepay direttamente nella tua email.</p>
+                    <input type="email" placeholder="La tua email" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                    <button class="w-full bg-emerald-500 py-2 rounded-lg font-bold text-sm hover:bg-emerald-600 transition">ISCRIVITI</button>
+                </div>
+                <div class="absolute -bottom-4 -right-4 opacity-10">
+                    <i data-lucide="mail" class="w-24 h-24"></i>
+                </div>
+            </div>
+        </aside>
+    </main>
 
-            <h2>Sicurezza e aspetti legali dei casino non AAMS con Postepay</h2>
-            <p>La sicurezza nei casinò non AAMS dipende da diversi fattori, tra cui la licenza posseduta dall’operatore, le misure tecniche adottate e la gestione responsabile dei dati e dei pagamenti. Molte piattaforme operano sotto autorizzazioni estere, come quelle rilasciate da autorità internazionali, che regolano aspetti quali correttezza dei giochi, protezione dei dati e procedure di pagamento. Queste licenze si collocano in una diversa giurisdizione rispetto a quella ADM, con standard che possono variare.</p>
-            <p>Dal punto di vista legale, i casinò non AAMS funzionano secondo normative straniere. Ciò comporta alcuni rischi per i giocatori italiani, come una tutela più limitata in caso di controversie o la possibilità di blocchi dei siti e dei pagamenti. L’analisi invita a considerare questi elementi con attenzione, senza offrire consulenza legale. È consigliabile informarsi sulle regole vigenti in Italia e accettare che l’accesso a tali piattaforme avviene sotto responsabilità individuale, valutando con equilibrio benefici e criticità.</p>
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-8 mb-10 opacity-50 grayscale hover:grayscale-0 transition">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/SSL_Logo.svg/1200px-SSL_Logo.svg.png" alt="SSL" class="h-8">
+                <div class="text-2xl font-black text-white flex items-center gap-1"><i data-lucide="octagon" class="text-red-600"></i>18+</div>
+                <div class="font-bold flex items-center gap-1 border border-gray-700 px-3 py-1 rounded">BeGambleAware</div>
+            </div>
+            <div class="max-w-4xl mx-auto text-center space-y-4">
+                <p class="text-xs leading-relaxed">Disclaimer: Il gioco d'azzardo è vietato ai minori di 18 anni e può causare dipendenza patologica. Informati sulle probabilità di vincita sul sito ufficiale ADM. I contenuti di questo sito sono a scopo puramente informativo e comparativo. Gioca responsabilmente. L’utilizzo di casinò non AAMS avviene sotto responsabilità individuale.</p>
+                <p class="text-[10px] opacity-30 uppercase tracking-widest">© 2026 CASINOHUB ITALIA - DOMINIO: LARDERIALACONCA.IT - TUTTI I DIRITTI RISERVATI</p>
+            </div>
+        </div>
+    </footer>
 
-            <h2>Segnali di affidabilità nei casino non AAMS che accettano Postepay</h2>
-            <p>La scelta tra numerose piattaforme straniere può creare incertezza, soprattutto quando gli operatori non sono conosciuti. Alcuni segnali aiutano a distinguere un casinò non AAMS più affidabile da realtà poco trasparenti. La presenza di una licenza internazionale valida, informazioni societarie accessibili e condizioni di pagamento chiare riducono il rischio di problemi e truffe.</p>
-            <h3>Checklist di affidabilità:</h3>
-            <ul>
-                <li>Licenza internazionale indicata in modo visibile</li>
-                <li>Dati della società facilmente reperibili</li>
-                <li>Connessione protetta tramite HTTPS/SSL</li>
-                <li>Termini e condizioni su bonus e pagamenti trasparenti</li>
-                <li>Supporto clienti attivo e raggiungibile</li>
-                <li>Collaborazioni con provider di giochi noti</li>
-            </ul>
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-indigo-950 text-white p-4 z-[100] border-t border-indigo-800 shadow-2xl">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <i data-lucide="cookie" class="text-emerald-400"></i>
+                <p class="text-sm">Utilizziamo i cookie per offrirti la migliore esperienza di gioco. Continuando accetti la nostra policy.</p>
+            </div>
+            <div class="flex gap-4">
+                <button onclick="closeCookie()" class="text-xs font-bold uppercase hover:underline">Scopri di più</button>
+                <button onclick="closeCookie()" class="bg-emerald-500 text-indigo-950 px-6 py-2 rounded-lg font-black text-sm hover:bg-emerald-400 transition">ACCETTA</button>
+            </div>
+        </div>
+    </div>
 
-            <h2>Giochi disponibili nei casino non AAMS che accettano Postepay</h2>
-            <p>Nei casinò non AAMS che accettano Postepay è presente una gamma ampia di titoli, paragonabile a quella delle piattaforme regolamentate. L’offerta include slot machine, slot con Jackpot, giochi da tavolo come roulette, Blackjack, poker e baccarat, oltre a sezioni di casinò live con dealer reali. In alcuni casi sono disponibili anche Crash games e game show interattivi.</p>
-            <p>L’utilizzo di Postepay come metodo di pagamento non limita l’accesso a specifiche categorie di giochi. La confusione nasce spesso dalle regole sui bonus, che possono escludere determinati titoli dal conteggio dei requisiti di puntata. La varietà dell’offerta resta uno dei motivi per cui molti utenti guardano oltre i siti AAMS, cercando esperienze di gioco più ampie e differenziate, pur mantenendo modalità di pagamento familiari.</p>
-
-            <h2>Esperienza di gioco live nei casino non AAMS</h2>
-            <p>Nei casinò online non AAMS, l’esperienza di gioco live si basa su tavoli con dealer reali e streaming in tempo reale. I tavoli live di roulette live e Blackjack live seguono standard simili a quelli dei mercati regolamentati. Il saldo ricaricato con Postepay viene utilizzato senza differenze rispetto ad altri giochi, offrendo continuità nelle esperienze di gioco. Questo riduce il timore che le piattaforme straniere non garantiscano ambienti professionali o sessioni eque.</p>
-
-            <h2>Bonus nei casino non AAMS per chi paga con Postepay</h2>
-            <p>Nei casinò non AAMS, i bonus sono generalmente collegati al deposito e non a uno specifico metodo di pagamento. I versamenti effettuati con Postepay rientrano di norma tra quelli idonei, al pari di altre carte accettate. Le promozioni più comuni includono bonus di benvenuto, free spins, offerte di cashback e programmi VIP.</p>
-            <p>L’interesse verso questi incentivi si accompagna spesso al timore di requisiti di puntata elevati o di metodi esclusi. Per questo motivo è rilevante verificare se i depositi con carta, inclusa Postepay, partecipano alle offerte e quali condizioni si applicano prima di attivare un bonus.</p>
-
-            <h2>Requisiti di puntata e restrizioni sui bonus</h2>
-            <p>I bonus prevedono spesso requisiti di puntata che stabiliscono quante volte il saldo bonus deve essere giocato prima del prelievo. Le condizioni includono percentuali diverse di contributo per i giochi, limiti di puntata massima e titoli esclusi. In alcuni casi, specifici metodi di pagamento possono essere esclusi dalle promozioni. La mancata lettura delle restrizioni legate al deposito è una causa frequente di difficoltà nel prelievo delle vincite.</p>
-
-            <h2>Registrazione e verifica del conto nei casino non AAMS</h2>
-            <p>La registrazione nei casinò non AAMS richiede in genere l’inserimento dei dati personali, la creazione delle credenziali di accesso e la conferma tramite email o numero di telefono. Una volta completata l’apertura del conto, è possibile effettuare depositi, spesso anche con Postepay, senza verifiche immediate. Tuttavia, questa fase iniziale non sostituisce i successivi controlli.</p>
-            <p>La procedura di verifica identità, nota come KYC, diventa quasi sempre necessaria al momento del prelievo. I documenti richiesti includono un documento valido, una prova di indirizzo e, in alcuni casi, una foto della carta utilizzata. La mancata presentazione di questi elementi può bloccare i pagamenti in uscita. Comprendere in anticipo questi passaggi riduce il rischio di ritardi e chiarisce le aspettative legate alla gestione del conto.</p>
-
-            <h2>Associare la propria Postepay in modo sicuro</h2>
-            <p>L’associazione di Postepay al conto di gioco richiede alcune accort
+    <script>
+        lucide.createIcons();
+        function toggleMenu(){
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        function closeCookie(){
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if(window.scrollY > 50){
+                nav.classList.add('bg-opacity-95', 'backdrop-blur-md');
+            } else {
+                nav.classList.remove('bg-opacity-95', 'backdrop-blur-md');
+            }
+        });
+    </script>
+</body>
+</html>
